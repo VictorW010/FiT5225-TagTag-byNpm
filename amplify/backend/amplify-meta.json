@@ -1,0 +1,108 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactfit5225-dev-141619-authRole",
+      "UnauthRoleArn": "arn:aws:iam::921732865361:role/amplify-reactfit5225-dev-141619-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::921732865361:role/amplify-reactfit5225-dev-141619-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reactfit5225-dev-141619-deployment",
+      "UnauthRoleName": "amplify-reactfit5225-dev-141619-unauthRole",
+      "StackName": "amplify-reactfit5225-dev-141619",
+      "StackId": "arn:aws:cloudformation:us-east-1:921732865361:stack/amplify-reactfit5225-dev-141619/9d6eaf20-ce59-11eb-abbe-0eb21ddd4aff",
+      "AmplifyAppId": "d19hdlj0qfapor",
+      "AuthTriggerTemplateURL": "",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-reactfit5225-dev-141619-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    }
+  },
+  "auth": {
+    "reactfit5225af7447b8": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "output": {
+        "UserPoolId": "us-east-1_ZqgaemSm6",
+        "AppClientIDWeb": "5mucq7u6v7535mk00rqtsvmfvm",
+        "AppClientID": "55ntr23p23r402culu20bc5ptd",
+        "IdentityPoolId": "us-east-1:dd38d815-774a-42d9-a5c3-26a52fc415bb",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:921732865361:userpool/us-east-1_ZqgaemSm6",
+        "IdentityPoolName": "reactfit5225af7447b8_identitypool_af7447b8__dev",
+        "UserPoolName": "reactfit5225af7447b8_userpool_af7447b8"
+      },
+      "lastPushTimeStamp": "2021-07-02T07:05:43.629Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-reactfit5225-dev-141619-deployment/amplify-cfn-templates/auth/reactfit5225af7447b8-cloudformation-template.yml",
+        "logicalId": "authreactfit5225af7447b8"
+      }
+    }
+  },
+  "storage": {
+    "s3Fit5225": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "BucketName": "fit5225image141619-dev",
+        "Region": "us-east-1"
+      },
+      "lastPushTimeStamp": "2021-07-02T07:05:43.634Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-reactfit5225-dev-141619-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+        "logicalId": "storages3Fit5225"
+      }
+    }
+  },
+  "function": {
+    "lam5225api": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [],
+      "lastBuildTimeStamp": "2021-07-02T07:03:16.281Z",
+      "lastPackageTimeStamp": "2021-07-02T07:03:17.942Z",
+      "distZipFilename": "lam5225api-3675592f557749727270-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-reactfit5225-dev-141619-deployment",
+        "s3Key": "amplify-builds/lam5225api-3675592f557749727270-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-reactfit5225-dev-141619-deployment/amplify-cfn-templates/function/lam5225api-cloudformation-template.json",
+        "logicalId": "functionlam5225api"
+      },
+      "lastPushTimeStamp": "2021-07-02T07:05:43.644Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:921732865361:function:lam5225api-dev",
+        "Name": "lam5225api-dev",
+        "LambdaExecutionRole": "reactfit5225LambdaRole406f6834-dev"
+      },
+      "lastPushDirHash": "pXWasyPV0E4DACqz3dz8K4hxGLQ="
+    }
+  },
+  "api": {
+    "api5225": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "lam5225api",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-reactfit5225-dev-141619-deployment/amplify-cfn-templates/api/api5225-cloudformation-template.json",
+        "logicalId": "apiapi5225"
+      },
+      "lastPushTimeStamp": "2021-07-02T07:05:43.644Z",
+      "output": {
+        "ApiName": "api5225",
+        "RootUrl": "https://5pn5mtwicl.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "5pn5mtwicl"
+      },
+      "lastPushDirHash": "OHJEQ+ucIPisREuD/9pnNcbDDYE="
+    }
+  }
+}

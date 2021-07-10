@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactfit5225-dev-141619-authRole",
+      "UnauthRoleArn": "arn:aws:iam::921732865361:role/amplify-reactfit5225-dev-141619-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::921732865361:role/amplify-reactfit5225-dev-141619-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reactfit5225-dev-141619-deployment",
+      "UnauthRoleName": "amplify-reactfit5225-dev-141619-unauthRole",
+      "StackName": "amplify-reactfit5225-dev-141619",
+      "StackId": "arn:aws:cloudformation:us-east-1:921732865361:stack/amplify-reactfit5225-dev-141619/9d6eaf20-ce59-11eb-abbe-0eb21ddd4aff",
+      "AmplifyAppId": "d19hdlj0qfapor"
+    },
+    "categories": {
+      "auth": {
+        "reactfit5225af7447b8": {}
+      },
+      "function": {
+        "lam5225api": {
+          "deploymentBucketName": "amplify-reactfit5225-dev-141619-deployment",
+          "s3Key": "amplify-builds/lam5225api-3675592f557749727270-build.zip"
+        }
+      }
+    }
+  }
+}
