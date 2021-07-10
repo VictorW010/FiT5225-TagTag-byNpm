@@ -1,3 +1,6 @@
+Tagtag is a cloud-based, serverless application that allows users to store images to public cloud storage (AWS S3) and retrieve images based on automatically generated tags. After the image is uploaded, the program can automatically mark the image and the detected object type.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
